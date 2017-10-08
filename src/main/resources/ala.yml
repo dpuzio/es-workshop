@@ -1,0 +1,7 @@
+docs:
+- fields:
+    content: "Ala ma kota"
+- fields:
+    content: "Ola ma psa"
+- fields:
+    content: "Ala karmi psa"
