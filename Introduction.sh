@@ -1,4 +1,4 @@
-$ curl -XPUT 'localhost:9200/books?pretty' -H 'Content-Type: application/json' -d'
+$ curl -XPUT 'localhost:9200/example_index?pretty' -H 'Content-Type: application/json' -d'
 {
     "settings" : {
         "index" : {
@@ -9,9 +9,14 @@ $ curl -XPUT 'localhost:9200/books?pretty' -H 'Content-Type: application/json' -
 }
 '
 
-$ curl -XPOST localhost:9200/books/book/1/ -d '
-{"title":"One", "author":"Arthur", "publicationYear": 1902}'
+$ curl -XPOST localhost:9200/example_index/doc/1/ -d '
+{"content":"Ala ma kota"}'
 
+$ curl -XPOST localhost:9200/example_index/doc/1/ -d '
+{"content":"Ola ma psa"}'
+
+$ curl -XPOST localhost:9200/example_index/doc/1/ -d '
+{"content":"Ala karmi psa"}'
 
 $ curl localhost:9200/_cat/indices
 green open books Lrjr8EnRSB2z7GZbgfPLyg 1 0 1 0 4.1kb 4.1kb
